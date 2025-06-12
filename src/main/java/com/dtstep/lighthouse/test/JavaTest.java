@@ -21,7 +21,7 @@ public class JavaTest {
             Double d = ThreadLocalRandom.current().nextDouble(1000);
             map.put("tps",String.format("%.3f", d));//防止上面随机数出现科学计数法
             System.out.println("send info:" + JsonUtil.toJSONString(map));
-            LightHouse.stat("_demo_feed_behavior_stat","AMV9PYUAQ29aPdN78Nl2dpkhcH4YsA87hvDzZI8t",map,t);
+            LightHouse.stat("Tzk:order_stat","AMV9PYUAQ29aPdN78Nl2dpkhcH4YsA87hvDzZI8t",map,t);
             if(i / 1000 == 0){
                 System.out.println("----test");
             }
