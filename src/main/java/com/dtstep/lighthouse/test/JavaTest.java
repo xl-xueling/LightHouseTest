@@ -22,9 +22,6 @@ public class JavaTest {
             map.put("tps",String.format("%.3f", d));//防止上面随机数出现科学计数法
             System.out.println("send info:" + JsonUtil.toJSONString(map));
             LightHouse.stat("Tzk:order_stat","AMV9PYUAQ29aPdN78Nl2dpkhcH4YsA87hvDzZI8t",map,t);
-            if(i / 1000 == 0){
-                System.out.println("----test");
-            }
         }
         System.out.println("send ok.");
         Thread.sleep(3000000);//client为异步发送，防止进程结束时内存中部分消息没有发送出去
