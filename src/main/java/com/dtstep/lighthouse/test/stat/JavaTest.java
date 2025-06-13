@@ -9,6 +9,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  *  使用Java上报统计消息，Web端显示统计结果约有1分钟延迟
+ *
+ *  参考文档：https://dtstep.com/docs/110037/
  */
 public class JavaTest {
 

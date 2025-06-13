@@ -8,7 +8,7 @@ import com.dtstep.lighthouse.common.util.JsonUtil;
 import java.util.List;
 
 /**
- * 使用java查询统计结果数据
+ * 使用java查询某个统计项的统计结果数据
  *
  * 参考文档：https://dtstep.com/docs/110038/
  */
@@ -21,6 +21,9 @@ public class JavaDataQuery {
         testDataQuery();
     }
 
+    /**
+     * Api查询统计结果，请您首先创建调用方，并且为调用方申请相应统计工程或统计项的访问授权
+     */
     private static final String callerName = "caller:app_waimai_order";
 
     private static final String callerKey = "6a7lVhHULhOydaaNeNrE852SVUmlPBePaXORf1V0";//注意：此处为当前调用方的秘钥，不是统计组的秘钥
