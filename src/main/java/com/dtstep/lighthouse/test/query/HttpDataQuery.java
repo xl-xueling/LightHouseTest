@@ -11,7 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 查询统计结果数据
+ * 使用java模拟Http接口调用查询统计结果数据
+ *
+ * 参考文档：https://dtstep.com/docs/110040/
  */
 public class HttpDataQuery {
 
@@ -23,7 +25,7 @@ public class HttpDataQuery {
 
     private static final String callerName = "caller:app_waimai_order";
 
-    private static final String callerKey = "6a7lVhHULhOydaaNeNrE852SVUmlPBePaXORf1V0";
+    private static final String callerKey = "6a7lVhHULhOydaaNeNrE852SVUmlPBePaXORf1V0";//注意：此处为当前调用方的秘钥，不是统计组的秘钥
 
     public static void testDataQuery() throws Exception {
         String apiUrl = "http://10.206.6.47:18101/api/rpc/v1/dataQuery";
