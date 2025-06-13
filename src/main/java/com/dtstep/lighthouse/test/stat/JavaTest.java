@@ -16,7 +16,7 @@ public class JavaTest {
         //LightHouse.init("10.206.6.47:4061,10.206.6.12:4061");//集群模式初始化，默认为部署集群的前两个节点
         LightHouse.init("10.206.6.47:4061");//单机模式初始化
         long t = System.currentTimeMillis();
-        for(int i = 0;i<26032;i++){
+        for(int i = 0;i<6032;i++){
             //修改统计组参数值、Token和秘钥
             HashMap<String,Object> paramMap = new HashMap<>();
             paramMap.put("order_id", RandomID.id(6));

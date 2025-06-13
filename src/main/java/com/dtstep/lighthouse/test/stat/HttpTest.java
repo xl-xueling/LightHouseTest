@@ -12,8 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  *  使用Java模拟Http接口调用上报统计消息，Web端显示统计结果约有1分钟延迟
  *
- *
- */
+ * */
 public class HttpTest {
 
     private static final String token = "N4C:order_stat";
