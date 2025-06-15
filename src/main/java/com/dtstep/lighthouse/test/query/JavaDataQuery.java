@@ -41,8 +41,8 @@ public class JavaDataQuery {
          *  statId为对应统计项ID，dimensValue为纬度值，startTime和endTime为查询起止时间范围。
          *
          *  dimensValue传值说明：对于单维度统计，直接传值即可，多维度统计请使用分号分割。
-         *  示例：<stat-item  title="每小时_各省份_访问uv" stat="bitcount(ime)" dimens="province" />，此时province请传入要查询的省份信息，比如：山东省、广东省。
-         *  示例：<stat-item  title="每小时_各省份_各业务_访问uv" stat="bitcount(ime)" dimens="province;biz" />，此时province请传入要查询的省份信息，比如：山东省;手机业务、广东省;家电业务。
+         *  示例：<stat-item  title="每小时_各省份_访问uv" stat="bitcount(ime)" dimens="province" />，此时纬度值province请传入要查询的省份信息，比如：山东省、广东省。
+         *  示例：<stat-item  title="每小时_各省份_各业务_访问uv" stat="bitcount(ime)" dimens="province;biz" />，此时纬度值province;biz请传入要查询的省份和业务信息，比如：山东省;手机业务、广东省;家电业务。
          */
         List<StatValue> statValues = LightHouse.dataDurationQuery(callerName,callerKey,statId,dimensValue,startTime,endTime);
         for (StatValue statValue : statValues) {
