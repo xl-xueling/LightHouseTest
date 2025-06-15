@@ -34,6 +34,7 @@ public class HttpDataQuery {
     private static final String callerKey = "6a7lVhHULhOydaaNeNrE852SVUmlPBePaXORf1V0";
 
     public static void testDataQuery() throws Exception {
+        //单机模式的http接口地址为当前节点，集群模式默认前三个节点的ip地址都提供查询服务，可以轮询访问。
         String apiUrl = "http://10.206.6.47:18101/api/rpc/v1/dataQuery";
         Map<String,Object> requestMap = new HashMap<>();
         requestMap.put("statId","1100610");
