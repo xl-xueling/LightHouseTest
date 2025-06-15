@@ -29,7 +29,9 @@ public class HttpDataQuery {
      */
     private static final String callerName = "caller:app_waimai_order";
 
-    private static final String callerKey = "6a7lVhHULhOydaaNeNrE852SVUmlPBePaXORf1V0";//注意：此处为当前调用方的秘钥，不是统计组的秘钥
+    //注意1：为调用方申请相应工程、统计项、数据视图的授权并且审核通过后，系统由于缓存原因约5分钟后生效。
+    //注意2：此处为当前调用方的秘钥，不是统计组的秘钥。
+    private static final String callerKey = "6a7lVhHULhOydaaNeNrE852SVUmlPBePaXORf1V0";
 
     public static void testDataQuery() throws Exception {
         String apiUrl = "http://10.206.6.47:18101/api/rpc/v1/dataQuery";
@@ -41,6 +43,11 @@ public class HttpDataQuery {
         batchList.add(DateUtil.parseDate("2024-09-05 07:00:00","yyyy-MM-dd HH:mm:ss"));
         batchList.add(DateUtil.parseDate("2024-09-05 06:00:00","yyyy-MM-dd HH:mm:ss"));
         batchList.add(DateUtil.parseDate("2024-09-05 05:00:00","yyyy-MM-dd HH:mm:ss"));
+        /**
+         *  dimensValue传值说明：对于单维度统计，直接传值即可，多维度统计请使用分号分割
+         *  示例：<stat-item  title="每小时_各省份_访问uv" stat="bitcount(ime)" dimens="province" />，此时province请传入要查询的省份信息，比如：山东省、广东省。
+         *  示例：<stat-item  title="每小时_各省份_各业务_访问uv" stat="bitcount(ime)" dimens="province;biz" />，此时province请传入要查询的省份信息，比如：山东省;手机业务、广东省;家电业务。
+         */
         requestMap.put("dimensValue","山东省");
         requestMap.put("batchList",batchList);
         String requestParams = JsonUtil.toJSONString(requestMap);
