@@ -29,6 +29,7 @@ public class HttpTest {
      * 单条消息上报（不推荐您使用这个接口）
      */
     public static void send() throws Exception {
+        //单机模式的http接口地址为当前节点，集群模式默认前三个节点的ip地址都提供查询服务，可以轮询访问。
         String apiUrl = "http://10.206.6.47:18101/api/rpc/v1/stat";
         long t = System.currentTimeMillis();
         for(int i=0;i<1676;i++){
@@ -56,8 +57,9 @@ public class HttpTest {
      * @throws Exception
      */
     public static void batchSend() throws Exception {
-        long t = System.currentTimeMillis();
+        //单机模式的http接口地址为当前节点，集群模式默认前三个节点的ip地址都提供查询服务，可以轮询访问。
         String apiUrl = "http://10.206.6.47:18101/api/rpc/v1/stats";
+        long t = System.currentTimeMillis();
         for(int m=0;m<100;m++){
             List<Map<String,Object>> requestList = new ArrayList<>();
             for(int n=0;n<300;n++){
