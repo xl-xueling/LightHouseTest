@@ -24,7 +24,7 @@ public class JavaDataQuery {
     /**
      * Api查询统计结果，请您首先创建调用方，并且为调用方申请相应统计工程或统计项的访问授权
      */
-    private static final String callerName = "caller:sss223";
+    private static final String callerName = "caller:api_waimai_order";
 
     //注意1：为调用方申请相应工程、统计项、数据视图的授权并且审核通过后，系统由于缓存原因约5分钟后生效。
     //注意2：此处为当前调用方的秘钥，不是统计组的秘钥。
